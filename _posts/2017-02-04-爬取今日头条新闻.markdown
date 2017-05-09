@@ -1,0 +1,35 @@
+---
+layout: post
+title:  "爬取糗事百科段子"
+date:   2017-02-04 19:43:46 +0800
+categories: jekyll update
+---
+
+使用requests+BeautifulSoup组合解析静态网页或者固定API数据
+
+
+步骤：
+1. 导入相关库
+```python
+import requests
+from bs4 import BeautifulSoup
+```
+
+2.  获取网页内容
+```python
+url = "http://www.qiushibaike.com/"
+wbdata = requests.get(url).text
+```
+
+3.  解析网页内容
+```python
+//得到匹配元素的HTML代码组成的列表
+soup = BeautifulSoup(wbdata, 'lxml')
+news_titles = soup.select('div.content > span')
+```
+
+4.  遍历输出
+```python
+for n in news_titles:
+    print(n.get_text())
+```

@@ -1,0 +1,16 @@
+---
+layout: post
+title:  "爬虫工具安装"
+date:   2017-01-28 22:58:46 +0800
+categories: jekyll update
+---
+
+安装python
+
+安装requests:    `pip install requests`
+
+[request官方文档](http://docs.python-requests.org/zh_CN/latest/)
+
+安装beautifulsoup:    `pip install bs4`
+
+安装lxml:    `pip install lxml`
